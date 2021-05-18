@@ -9,8 +9,8 @@ if( !isset($_SESSION["login"]) ) {
 require 'functions.php';
 $angsuran = query("SELECT * FROM angsuran");
 
-if( isset($_POST["cari"]) ) {
-	$angsuran = cari($_POST["keyword"]);
+if( isset($_POST["cariAngsuran"]) ) {
+	$angsuran = cariAngsuran($_POST["keyword"]);
 }
 
 ?>
@@ -31,7 +31,7 @@ if( isset($_POST["cari"]) ) {
 <form action="" method="post">
 
 	<input type="text" name="keyword" size="40" autofocus placeholder="masukkan keyword pencarian.." autocomplete="off">
-	<button type="submit" name="cari">Cari!</button>
+	<button type="submit" name="cariAngsuran">Cari!</button>
 	
 </form>
 
